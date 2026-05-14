@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JustManga - Read Manga Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 JustManga</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#popular">Popular</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to JustManga</h1>
+            <p>Discover and read thousands of manga online for free</p>
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-bar" 
+                    placeholder="Search for your favorite manga..."
+                    autocomplete="off"
+                >
+                <button class="search-btn" onclick="searchManga()">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Manga Section -->
+    <section id="popular" class="popular-section">
+        <h2>Popular Manga</h2>
+        <div id="popularContainer" class="manga-grid">
+            <!-- Popular manga will be loaded here -->
+        </div>
+    </section>
+
+    <!-- Search Results Section -->
+    <section id="results" class="results-section" style="display: none;">
+        <h2>Search Results</h2>
+        <button class="back-btn" onclick="goBack()">← Back to Home</button>
+        <div id="searchResults" class="manga-grid">
+            <!-- Search results will be displayed here -->
+        </div>
+    </section>
+
+    <!-- Manga Reader Modal -->
+    <div id="readerModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeReader()">&times;</span>
+            <div class="reader-container">
+                <h2 id="mangaTitle"></h2>
+                <div class="chapter-selector">
+                    <label for="chapterSelect">Select Chapter:</label>
+                    <select id="chapterSelect" onchange="loadChapter()">
+                        <option>Loading chapters...</option>
+                    </select>
+                </div>
+                <div id="readerContent" class="reader-content">
+                    <!-- Manga pages will be displayed here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 JustManga. All rights reserved.</p>
+            <p>Disclaimer: This is a demo website for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
